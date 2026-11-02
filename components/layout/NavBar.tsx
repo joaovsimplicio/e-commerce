@@ -2,8 +2,11 @@ import Link from "next/link";
 
 function NavBar() {
   return (
-    <nav className="sticky top-0 flex items-center py-2 px-8 justify-between z-50 bg-slate-800 text-gray-300">
-      <Link href="/" className="uppercase font-bold text-md h-12 flex items-center">
+    <nav className="sticky top-0 z-50 flex items-center justify-between bg-slate-800 px-8 py-2 text-gray-300">
+      <Link
+        href="/"
+        className="text-md flex h-12 items-center font-bold uppercase"
+      >
         Next Store
       </Link>
     </nav>
