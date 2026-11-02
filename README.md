@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next Store
 
-## Getting Started
+## Sobre o projeto
 
-First, run the development server:
+<!--
+TODO(jv): escreva esta seção (1 a 2 parágrafos).
+  - O que é: e-commerce de teclados mecânicos com marcas e produtos fictícios.
+  - Por que existe: projeto de portfólio, e o que você quer mostrar com ele.
+  - Destaques planejados: configurador visual, drops limitados, assistente com IA local.
+Pronto quando: alguém que nunca viu o projeto entende o que é em 30 segundos de leitura.
+Dica: escreva para um recrutador, não para um dev. Depois apague este comentário.
+-->
+
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router), React 19 e TypeScript
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [Vitest](https://vitest.dev) para testes
+- ESLint e Prettier (com ordenação de classes do Tailwind)
+
+## Rodando localmente
+
+Requisitos: Node.js 22+.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando                | O que faz                              |
+| ---------------------- | -------------------------------------- |
+| `npm run dev`          | Servidor de desenvolvimento            |
+| `npm run build`        | Build de produção                      |
+| `npm run start`        | Roda o build de produção               |
+| `npm run lint`         | ESLint                                 |
+| `npm run format`       | Formata o código com Prettier          |
+| `npm run format:check` | Verifica a formatação sem alterar nada |
+| `npm test`             | Roda os testes uma vez                 |
+| `npm run test:watch`   | Roda os testes em modo watch           |
 
-## Learn More
+## Convenções
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Uma branch por feature (`feat/cart`, `chore/setup`), integrada à `main` por Pull Request.
+- Commits pequenos no padrão [Conventional Commits](https://www.conventionalcommits.org), em inglês.
+- Rotas e código em inglês; textos da interface em português.
