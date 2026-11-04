@@ -2,6 +2,7 @@
 
 **E-commerce completo de teclados mecânicos, com marcas fictícias, configurador visual, drops de edição limitada e um assistente de compras com IA rodando 100% local.**
 
+[![CI](https://github.com/joaovsimplicio/e-commerce/actions/workflows/ci.yml/badge.svg)](https://github.com/joaovsimplicio/e-commerce/actions/workflows/ci.yml)
 ![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
@@ -82,7 +83,7 @@ flowchart LR
 | Estilo             | Tailwind CSS v4                                                      | ✅ em uso    |
 | Testes             | Vitest                                                               | ✅ em uso    |
 | Qualidade          | ESLint, Prettier                                                     | ✅ em uso    |
-| CI                 | GitHub Actions (lint, tipos, testes e build em cada PR)              | 🔜 planejado |
+| CI                 | GitHub Actions (lint, tipos, formatação, testes e build em cada PR)  | ✅ em uso    |
 | Estado do carrinho | Zustand, com persistência local                                      | 🔜 planejado |
 | Banco de dados     | PostgreSQL + Drizzle ORM                                             | 🔜 planejado |
 | Autenticação       | Better Auth                                                          | 🔜 planejado |
@@ -97,7 +98,7 @@ O desenvolvimento segue em fases. Cada funcionalidade é feita numa branch próp
 **Fase 0: Fundação**
 
 - [x] Setup do projeto: TypeScript, Tailwind, ESLint, Prettier e Vitest
-- [ ] CI com GitHub Actions
+- [x] CI com GitHub Actions
 - [ ] Design system e identidade visual
 
 **Fase 1: Catálogo**
@@ -160,6 +161,7 @@ As próximas fases vão adicionar Docker (para o PostgreSQL), a Stripe CLI (para
 | `npm run build`        | Build de produção                      |
 | `npm run start`        | Roda o build de produção               |
 | `npm run lint`         | ESLint                                 |
+| `npm run typecheck`    | Checagem de tipos do TypeScript        |
 | `npm run format`       | Formata o código com Prettier          |
 | `npm run format:check` | Verifica a formatação sem alterar nada |
 | `npm test`             | Roda os testes uma vez                 |
@@ -180,7 +182,7 @@ db/           schema e migrations do banco
 - Uma branch por funcionalidade (`feat/cart`, `feat/configurator`), integrada à `main` por Pull Request.
 - Commits pequenos, cada um com uma única mudança, no padrão [Conventional Commits](https://www.conventionalcommits.org), em inglês.
 - Rotas e código em inglês; textos da interface em português.
-- Todo PR precisa passar por lint, checagem de tipos, testes e build.
+- Todo PR passa automaticamente pelo [CI](.github/workflows/ci.yml): lint, checagem de tipos, formatação, testes e build.
 
 ## Autor
 
